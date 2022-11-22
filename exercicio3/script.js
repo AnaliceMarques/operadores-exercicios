@@ -80,7 +80,7 @@ const comJaneiro = comissao*vendasJaneiro
 console.log(comJaneiro.toFixed(2))
 
 // 3) Quanto Fulano de Silva será descontado em janeiro pelo INSS ( o valor a ser calculado deve levar em consideração o salário + porcentagem de vendas.)
-const descJaneiro = (salMaisCreche + comJaneiro) * inss
+const descJaneiro = (salario + comJaneiro) * inss
 console.log(descJaneiro.toFixed(2))
 
 // 4) Imprima no console o cálculo do salário de todos os meses com acréscimos e descontos.
@@ -88,22 +88,22 @@ console.log(`Cálculo do salário = salário + auxílio creche + comissão - des
 Comissão = 10% do valor das vendas do mês \n
 Desconto do INSS = 5% * (salário + auxílio creche + 10% das vendas do mês)`)
 
-const salJan = (salMaisCreche + comissao * vendasJaneiro) * (1-inss) 
+const salJan = (salario + comissao * vendasJaneiro) * (1-inss) + auxCreche
 console.log("O salário do mês de janeiro foi de: R$",salJan.toFixed(2))
 
-const salFev = (salMaisCreche + comissao * vendasFevereiro) * (1-inss) 
+const salFev = (salario + comissao * vendasFevereiro) * (1-inss) + auxCreche 
 console.log("O salário do mês de fevereiro foi de: R$",salFev.toFixed(2))
 
-const salMar = (salMaisCreche + comissao * vendasMarco) * (1-inss) 
+const salMar = (salario + comissao * vendasMarco) * (1-inss) + auxCreche 
 console.log("O salário do mês de março foi de: R$",salMar.toFixed(2))
 
-const salAbr = (salMaisCreche + comissao * vendasAbril) * (1-inss) 
+const salAbr = (salario + comissao * vendasAbril) * (1-inss) + auxCreche 
 console.log("O salário do mês de abril foi de: R$",salAbr.toFixed(2))
 
-const salMai = (salMaisCreche + comissao * vendasMaio) * (1-inss) 
+const salMai = (salario + comissao * vendasMaio) * (1-inss) + auxCreche 
 console.log("O salário do mês de maio foi de: R$",salMai.toFixed(2))
 
-const salJun = (salMaisCreche + comissao * vendasJunho) * (1-inss)  
+const salJun = (salario + comissao * vendasJunho) * (1-inss) + auxCreche  
 console.log("O salário do mês de junho foi de: R$",salJun.toFixed(2))
 
 // 5) A média do salário em  seis meses (de janeiro a junho), levando em consideração as comissões e auxílio. 
